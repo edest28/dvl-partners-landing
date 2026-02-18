@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --font-main: 'Manrope', sans-serif;
+  --font-logo: 'Cormorant Garamond', serif;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  /* Slightly darker slate for better legibility since it's larger */
+  --color-bg: #ffffff;
+  --max-width: 800px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  /* Changed from overflow: hidden and height: 100vh to allow for content flow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: var(--max-width);
+  flex: 1;
+  justify-content: center;
+}
+
+.logo {
+  font-family: var(--font-logo);
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 6rem;
+  color: #000000;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #3b82f6;
+  font-weight: 300;
+}
+
+.mission-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 650px;
+  font-weight: 400;
+}
+
+footer {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  /* Grey text */
+  margin-top: auto;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--color-text);
+}
+
+.footer-divider {
+  margin: 0 0.5rem;
+}
+
+/* About Page Specifics */
+.about-page-container {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  justify-content: flex-start;
+  min-height: auto;
+}
+
+.about-logo {
+  margin-bottom: 6rem;
+}
+
+.about-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  /* Spacing between sections */
+  text-align: left;
+  /* Left align text for long-form content */
+}
+
+.about-section h2 {
+  font-family: var(--font-logo);
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #000000;
+  letter-spacing: 0.01em;
+}
+
+.about-section p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 100%;
+  /* Use full container width */
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .mission-text,
+  .about-section p {
+    font-size: 1.05rem;
+  }
+}
