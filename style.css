@@ -81,11 +81,11 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #000000;
 }
 
 .footer-locations {
   font-size: 0.8rem;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
